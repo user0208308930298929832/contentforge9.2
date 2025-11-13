@@ -3,7 +3,8 @@ from datetime import date, datetime, timedelta
 from typing import List, Dict, Any
 
 import streamlit as st
-from openai import OpenAI
+import openai
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 # ---------------- CONFIG BÁSICA ----------------
 st.set_page_config(page_title="ContentForge v9.2", layout="wide")
